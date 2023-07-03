@@ -149,5 +149,13 @@
       "response": "",
       "history": ""
     }
-  }
+  },
+  "dummy_identity": {
+    "file_name": "dummy_conversation.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "",
+      "response": "output",
+      "history": "history"
+    }
 }
