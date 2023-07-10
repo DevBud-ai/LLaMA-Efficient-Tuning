@@ -12,3 +12,5 @@ mdtex2html
 uvicorn
 fastapi
 sentencepiece
+wandb
+deepspeed
