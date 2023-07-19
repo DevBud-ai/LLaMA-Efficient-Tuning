@@ -106,10 +106,10 @@ class PeftTrainer(Seq2SeqTrainer):
         if self.finetuning_args.finetuning_type == "lora":
             backbone_model.save_pretrained(output_dir, state_dict=get_state_dict(backbone_model))
         else: # freeze/full tuning
-            if deepspeed.is_deepspeed_zero3_enabled():
-                state_dict = self.model_wrapped._zero3_consolidated_16bit_state_dict()
-            else:
-                state_dict = get_state_dict(backbone_model)
+            #if deepspeed.is_deepspeed_zero3_enabled():
+            #    state_dict = self.model_wrapped._zero3_consolidated_16bit_state_dict()
+            #else:
+            state_dict = get_state_dict(backbone_model)
             backbone_model.config.use_cache = True
             backbone_model.save_pretrained(
                 output_dir,
